@@ -1098,6 +1098,41 @@ namespace ur3_moveit_control
       trajectory_msg,
       true);
 
+RCLCPP_INFO(
+    node_->get_logger(),
+    "Cartesian fraction = %.3f",
+    fraction
+);
+
+RCLCPP_INFO(
+    node_->get_logger(),
+    "Generated trajectory points = %zu",
+    trajectory_msg.joint_trajectory.points.size()
+);
+
+for (size_t i = 0;
+     i < trajectory_msg.joint_trajectory.points.size();
+     ++i)
+{
+    const auto& p = trajectory_msg.joint_trajectory.points[i];
+
+    if (p.positions.size() >= 6)
+    {
+        RCLCPP_INFO(
+            node_->get_logger(),
+            "Point %zu: q = [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f]",
+            i,
+            p.positions[0],
+            p.positions[1],
+            p.positions[2],
+            p.positions[3],
+            p.positions[4],
+            p.positions[5]
+        );
+    }
+}
+    
+
     if (fraction < required_fraction)
     {
       if (!allow_pose_fallback)

@@ -25,5 +25,16 @@ def generate_launch_description():
                 ('/image', '/camera/camera/color/image_raw')
             ]
         ),
+
+        # 2. Hiển thị ảnh camera với ArUco marker được vẽ lên
+        Node(
+            package='image_view',
+            executable='image_view',
+            name='aruco_debug_view',
+            remappings=[
+                ('image', '/aruco_single/result')
+            ],
+            output='screen'
+        ),
         
     ])

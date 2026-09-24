@@ -150,7 +150,9 @@ def launch_setup(context, *args, **kwargs):
             " ",
         ]
     )
-    robot_description_semantic = {"robot_description_semantic": robot_description_semantic_content}
+    robot_description_semantic = {
+        "robot_description_semantic": ParameterValue(robot_description_semantic_content, value_type=str)
+    }
 
     publish_robot_description_semantic = {
         "publish_robot_description_semantic": _publish_robot_description_semantic
@@ -262,10 +264,11 @@ def launch_setup(context, *args, **kwargs):
         parameters=[
             robot_description,
             robot_description_semantic,
-            ompl_planning_pipeline_config,
-            robot_description_kinematics,
-            robot_description_planning,
             warehouse_ros_config,
+            # The MotionPlanning display reloads planning and kinematics
+            # parameters from move_group. Preloading the same numeric
+            # parameters on RViz makes the Humble plugin request them as
+            # strings and raises a parameter type exception.
             {
                 "use_sim_time": use_sim_time,
             },

@@ -10,6 +10,9 @@
 
   <xacro:ur_srdf name="$(arg name)" prefix="$(arg prefix)" tip_link="gripper_tcp"/>
 
+  <!-- Virtual joint: fixes robot base to world -->
+  <virtual_joint name="fixed_base" type="fixed" parent_frame="world" child_link="$(arg prefix)base_link" />
+
   <!-- Gripper planning group -->
   <group name="gripper">
     <joint name="gripper_joint" />

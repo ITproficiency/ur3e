@@ -71,6 +71,7 @@ install(
   PROGRAMS
     src/send_goal_client.py
     src/random_pick_test.py
+    scripts/save_scene_to_warehouse.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

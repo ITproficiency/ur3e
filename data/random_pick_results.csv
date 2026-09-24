@@ -123,3 +123,51 @@ trial,seed,object_x,object_y,object_z,transport_dx,transport_dy,success,failed_s
 8,23,0.608985,0.034979,0.050000,0.007029,-0.067281,True,,"Pick, transport, pour, and cleanup completed",20.010
 9,23,0.590712,-0.021191,0.050000,0.012635,-0.083292,True,,"Pick, transport, pour, and cleanup completed",20.581
 10,23,0.584940,-0.008863,0.050000,0.002720,0.092827,True,,"Pick, transport, pour, and cleanup completed",20.598
+1,23,0.635492,0.053833,0.050000,0.015697,-0.060683,True,,"Pick, transport, pour, and cleanup completed",23.121
+2,23,0.598405,-0.014498,0.050000,-0.005677,-0.070695,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",10.732
+3,23,0.580845,0.014419,0.050000,0.016066,-0.063431,True,,"Pick, transport, pour, and cleanup completed",23.714
+4,23,0.622600,-0.009450,0.050000,0.000505,0.074360,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",10.753
+5,23,0.583453,0.033972,0.050000,0.003565,-0.084840,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",11.815
+6,23,0.638244,-0.016465,0.050000,0.010391,0.098742,True,,"Pick, transport, pour, and cleanup completed",23.593
+7,23,0.596876,0.056955,0.050000,0.002919,0.067105,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",10.826
+8,23,0.608985,0.034979,0.050000,0.007029,-0.067281,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",13.019
+9,23,0.590712,-0.021191,0.050000,0.012635,-0.083292,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",13.881
+10,23,0.584940,-0.008863,0.050000,0.002720,0.092827,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",14.785
+1,23,0.635492,0.053833,0.050000,0.015697,-0.060683,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",12.151
+2,23,0.598405,-0.014498,0.050000,-0.005677,-0.070695,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",12.364
+3,23,0.580845,0.014419,0.050000,0.016066,-0.063431,True,,"Pick, transport, pour, and cleanup completed",24.065
+4,23,0.622600,-0.009450,0.050000,0.000505,0.074360,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",11.521
+1,23,0.635492,0.053833,0.050000,0.015697,-0.060683,True,,"Pick, transport, pour, and cleanup completed",22.674
+2,23,0.598405,-0.014498,0.050000,-0.005677,-0.070695,True,,"Pick, transport, pour, and cleanup completed",23.079
+3,23,0.580845,0.014419,0.050000,0.016066,-0.063431,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,11.617
+4,23,0.622600,-0.009450,0.050000,0.000505,0.074360,True,,"Pick, transport, pour, and cleanup completed",24.460
+5,23,0.583453,0.033972,0.050000,0.003565,-0.084840,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",10.723
+6,23,0.638244,-0.016465,0.050000,0.010391,0.098742,True,,"Pick, transport, pour, and cleanup completed",24.363
+1,23,0.635492,0.053833,0.050000,0.392433,-0.603415,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.331
+2,23,0.598405,-0.014498,0.050000,-0.141920,-0.653476,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.583
+3,23,0.580845,0.014419,0.050000,0.401658,-0.617155,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",9.762
+4,23,0.622600,-0.009450,0.050000,0.012634,0.671799,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,17.544
+5,23,0.583453,0.033972,0.050000,0.089123,-0.724198,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.622
+6,23,0.638244,-0.016465,0.050000,0.259787,0.793712,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.854
+7,23,0.596876,0.056955,0.050000,0.072986,0.635526,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.488
+8,23,0.608985,0.034979,0.050000,0.175724,-0.636406,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.742
+9,23,0.590712,-0.021191,0.050000,0.315873,-0.716460,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.730
+10,23,0.584940,-0.008863,0.050000,0.068010,0.764133,False,approach,"approach: Pose planning succeeded, but trajectory execution failed; check controller path tolerance / tracking",9.622
+1,23,0.635492,0.053833,0.050000,0.156973,-0.501708,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.858
+2,23,0.598405,-0.014498,0.050000,-0.056768,-0.526738,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.797
+3,23,0.580845,0.014419,0.050000,0.160663,-0.508577,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,10.145
+4,23,0.622600,-0.009450,0.050000,0.005054,0.535900,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,18.494
+1,23,0.635492,0.053833,0.050000,0.156973,-0.501708,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.666
+2,23,0.598405,-0.014498,0.050000,-0.056768,-0.526738,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.849
+3,23,0.580845,0.014419,0.050000,0.160663,-0.508577,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,10.447
+4,23,0.622600,-0.009450,0.050000,0.005054,0.535900,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,18.479
+5,23,0.583453,0.033972,0.050000,0.035649,-0.562099,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,9.992
+6,23,0.638244,-0.016465,0.050000,0.103915,0.596856,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,18.028
+7,23,0.596876,0.056955,0.050000,0.029194,0.517763,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.670
+8,23,0.608985,0.034979,0.050000,0.070290,-0.518203,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,16.952
+9,23,0.590712,-0.021191,0.050000,0.126349,-0.558230,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,10.040
+10,23,0.584940,-0.008863,0.050000,0.027204,0.582066,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,11.599
+1,23,0.635492,0.053833,0.050000,0.156973,-0.501708,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,23.977
+1,23,0.635492,0.053833,0.050000,0.078487,-0.101708,False,transport_cartesian,transport_cartesian: Goal failed or was preempted,15.871
+2,23,0.598405,-0.014498,0.050000,-0.028384,-0.126738,True,,"Pick, transport, pour, and cleanup completed",21.283
+3,23,0.580845,0.014419,0.050000,0.080332,-0.108577,False,advance_to_grasp,advance_to_grasp: Goal failed or was preempted,10.001

@@ -46,6 +46,10 @@ ARM_JOINT_NAMES = [
     'wrist_3_joint',
 ]
 
+def wait_for_user(step_name: str):
+    print("\n" + "=" * 50)
+    input(f">> Bấm [ENTER] để chạy: [{step_name}]...")
+    print("=" * 50 + "\n")
 
 class UR3ActionClient(Node):
 
@@ -334,8 +338,8 @@ class UR3ActionClient(Node):
             close_position=FIXED_CLOSE_POSITION,
             max_effort=FIXED_MAX_EFFORT,
             pour_angle_deg=FIXED_POUR_WRIST_ANGLE_DEG,
-            transport_dx=None,
-            transport_dy=None):
+            transport_dx=0.1,
+            transport_dy=0.5):
         """Run the shared side-grasp flow for an object pose in base_link."""
 
         # Check connectivity before creating the asynchronous state machine.
