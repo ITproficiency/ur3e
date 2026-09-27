@@ -1,70 +1,24 @@
-/moveit_run_benchmark:
-  ros__parameters:
-    benchmark_config:
-      parameters:
-        name: "UR3e_OMPL_Benchmark"
-        runs: 10
-        group: ur_manipulator
-        timeout: 5.0
-        output_directory: "/tmp/moveit_benchmarks/"
-        predefined_poses_group: ur_manipulator
-        predefined_poses:
-          - home
-          - up
+benchmark_config:
+  warehouse:
+    host: "/home/tu/.ros/warehouse_ros.sqlite"
+    port: 0
+    scene_name: "Ur3e"
+  parameters:
+    name: "Ur3e"
+    runs: 10
+    group: ur_manipulator
+    timeout: 5.0
+    output_directory: "/tmp/moveit_benchmarks/"
+    query_regex: ".*"     # Chạy toàn bộ các Query bạn đã Save trong Scene này
+    # Hoặc ghi rõ tên query cụ thể:
+    # query_regex: "pre-grasp"
 
-      collision_objects:
-        - id: "back_wall"
-          header:
-            frame_id: "world"
-          primitives:
-            - type: "box"
-              dimensions: [0.02, 1.0, 0.8]
-          primitive_poses:
-            - position: [-0.2, 0.0, 0.4]
-              orientation: [0.0, 0.0, 0.0, 1.0]
-
-        - id: "left_wall"
-          header:
-            frame_id: "world"
-          primitives:
-            - type: "box"
-              dimensions: [0.8, 0.02, 0.8]
-          primitive_poses:
-            - position: [0.2, 0.5, 0.4]
-              orientation: [0.0, 0.0, 0.0, 1.0]
-
-        - id: "right_wall"
-          header:
-            frame_id: "world"
-          primitives:
-            - type: "box"
-              dimensions: [0.8, 0.02, 0.8]
-          primitive_poses:
-            - position: [0.2, -0.5, 0.4]
-              orientation: [0.0, 0.0, 0.0, 1.0]
-
-        - id: "table"
-          header:
-            frame_id: "world"
-          primitives:
-            - type: "box"
-              dimensions: [1.0, 0.7, 0.05]
-          primitive_poses:
-            - position: [0.5, 0.0, -0.025]
-              orientation: [0.0, 0.0, 0.0, 1.0]
-
-      planning_pipelines:
-        pipelines: ["ompl"]
-        ompl:
-          name:
-            - RRTConnectkConfigDefault
-            - PRMkConfigDefault
-            - KPIECEkConfigDefault
-            - RRTstarkConfigDefault
-
-      queries:
-        - name: pre-grasp
-          group: ur_manipulator
-          goal_constraints:
-            - position: [0.485, 0.0, 0.11]
-              orientation: [0.5, 0.5, 0.5, 0.5]
+  planning_pipelines:
+    pipelines: [pipeline1]
+    pipeline1:
+      name: ompl
+      planners:
+        - RRTConnectkConfigDefault
+        - PRMkConfigDefault
+        - KPIECEkConfigDefault
+        - RRTstarkConfigDefault

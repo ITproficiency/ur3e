@@ -26,6 +26,7 @@ ur_manipulator:
     - RRTstarkConfigDefault
     - PRMkConfigDefault
     - KPIECEkConfigDefault
+  projection_evaluator: joints(shoulder_pan_joint,shoulder_lift_joint)
 
   # Check collision more densely than the upstream 0.01 default. This does
   # not move any wall; it only samples the planned path more carefully.

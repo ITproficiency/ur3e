@@ -118,14 +118,10 @@ void BenchmarkExecutor::initialize(const std::vector<std::string>& planning_pipe
 {
   planning_pipelines_.clear();
 
-  // ros::NodeHandle pnh("~");
-  std::string parent_node_name = node_->get_name();
   for (const std::string& planning_pipeline_name : planning_pipeline_names)
   {
-    // Initialize planning pipelines from configured child namespaces
-    static rclcpp::Node::SharedPtr child_node = rclcpp::Node::make_shared(planning_pipeline_name, parent_node_name);
     planning_pipeline::PlanningPipelinePtr pipeline(new planning_pipeline::PlanningPipeline(
-        planning_scene_->getRobotModel(), child_node, "planning_plugin", "request_adapters"));
+        planning_scene_->getRobotModel(), node_, planning_pipeline_name, "planning_plugin", "request_adapters"));
 
     // Verify the pipeline has successfully initialized a planner
     if (!pipeline->getPlannerManager())

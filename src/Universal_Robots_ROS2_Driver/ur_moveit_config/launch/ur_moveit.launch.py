@@ -228,6 +228,7 @@ def launch_setup(context, *args, **kwargs):
     warehouse_ros_config = {
         "warehouse_plugin": "warehouse_ros_sqlite::DatabaseConnection",
         "warehouse_host": warehouse_sqlite_path,
+        "warehouse_port": 0,
     }
 
     # Start the actual move_group node/action server
@@ -400,7 +401,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             "warehouse_sqlite_path",
             default_value=os.path.expanduser("~/.ros/warehouse_ros.sqlite"),
-            description="Path where the warehouse database should be stored",
+            description="Path to the SQLite database file for warehouse_ros",
         )
     )
     declared_arguments.append(
